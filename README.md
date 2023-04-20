@@ -12,7 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-To install Auto-GPT, follow these steps:
+To install the bank tech test, follow these steps:
 
 1. Make sure you have the prerequisites listed above, if not, install/get them
 
