@@ -1,87 +1,88 @@
-# Project Title
+# Bank Tech Test
 
-One Paragraph of project description goes here
+A basic ATM style application that allows the user to make deposits and withdrawls, and prints a formatted statement of transactions.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* Python 3.10 or later
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+To install Auto-GPT, follow these steps:
 
-Say what the step will be
+1. Make sure you have the prerequisites listed above, if not, install/get them
 
+2. Clone the repository: For this step, you need Git installed.
+
+   ```bash
+   git clone https://github.com/cxxii/bank-tech-test.git
+   ```
+
+3. Navigate to the directory where the repository was downloaded
+
+    ```bash
+    cd back-tech-test
+    ```
+
+## Usage
+
+1. Navigate to directory of bank_tech.py
+
+2. Open Python interactive shell
+
+    ```
+    python3
+    ```
+
+3. Import module
+
+    ```python
+    >>> import bank_tech
+    ```
+
+4. Create an instance of the Bank class by calling its constructor
+
+    ```python
+    >>> bank = bank_tech.Bank()
+    ```
+
+5. Call the methods of the Bank instance as needed
+
+    ```python
+    >>> bank.deposit(330, "12/10/22")
+    >>> bank.deposit(421, "13/11/22")
+    >>> bank.withdraw(112, "14/12/22")
+    >>> bank.statement()
+    ```
+
+## Running the tests & coverage
+
+To run all tests, run the following command:
+
+```bash
+pytest bank_tech_tests.py
 ```
-Give the example
-```
 
-And repeat
+To view the coverage report, run the following command:
+```bash
 
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
 
 ```
 Give an example
 ```
 
-### And coding style tests
+## Version
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+v1.0.0
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Callum Clark**
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

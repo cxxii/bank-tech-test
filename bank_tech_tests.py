@@ -1,7 +1,6 @@
 import unittest
 import pytest
-from  import Bank
-
+from bank_tech import Bank
 
 
 class TestBank(unittest.TestCase):

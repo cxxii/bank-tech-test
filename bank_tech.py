@@ -120,15 +120,3 @@ class Bank:
         print(horizontal_line)
 
         return ""
-
-
-def main():
-    bank = Bank()
-    bank.deposit(22425.27, "31/10/91")
-    bank.deposit(365, "21/11/22")
-    bank.withdraw(3389.55, "13/2/22")
-    print(bank.statement())
-
-
-if __name__ == "__main__":
-    main()

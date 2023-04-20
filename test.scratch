@@ -1,0 +1,75 @@
+class Bank:
+    def __init__(self):
+        self._transactions = []
+
+    def deposit(self, amount: float, date: str) -> None:
+        self._transactions.append((date, amount))
+
+    def withdraw(self, amount: float, date: str) -> None:
+        self._transactions.append((date, -amount))
+
+    @property
+    def balance(self) -> float:
+        balance = 0.0
+        for _, amount in self._transactions:
+            balance += amount
+        return balance
+
+    def statement(self) -> str:
+        horizontal_line = "." * 69
+
+        output = [horizontal_line,
+                  f"|| {'DATE'.center(12)} || {'CREDIT'.center(13)} || {'DEBIT'.center(13)} || {'BALANCE'.center(13)} ||",
+                  horizontal_line]
+
+        for date, amount in reversed(self._transactions):
+            if amount > 0:
+                credit = f"{amount:.2f}".rjust(13)
+                debit = "".rjust(13)
+            else:
+                credit = "".rjust(13)
+                debit = f"{-amount:.2f}".rjust(13)
+
+            output.append(f"|| {date.rjust(12)} || {credit} || {debit} || {self.balance:.2f}".rjust(13))
+
+        output.append(horizontal_line)
+        return "\n".join(output)
+
+
+def main() -> None:
+    bank = Bank()
+    bank.deposit(132, "13/2/22")
+    bank.deposit(132, "13/2/22")
+    bank.withdraw(12, "13/2/22")
+    print(bank.statement())
+
+
+if __name__ == '__main__':
+    main()
+
+
+def main():
+    bank = Bank()
+    
+    while True:
+        print("Enter 'd' to deposit, 'w' to withdraw, 's' for statement, or 'q' to quit")
+        choice = input()
+        
+        if choice == 'd':
+            amount = float(input("Enter amount to deposit: "))
+            date = input("Enter date: ")
+            bank.deposit(amount, date)
+            
+        elif choice == 'w':
+            amount = float(input("Enter amount to withdraw: "))
+            date = input("Enter date: ")
+            bank.withdraw(amount, date)
+            
+        elif choice == 's':
+            bank.statement()
+            
+        elif choice == 'q':
+            break
+            
+        else:
+            print("Invalid choice, please try again.")
