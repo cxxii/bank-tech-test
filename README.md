@@ -59,6 +59,8 @@ To install the bank tech test, follow these steps:
     >>> bank.statement()
     ```
 
+    ![screenshot](https://github.com/cxxii/bank-tech-test/blob/main/screenshot.png)
+
 ## Running the tests & coverage
 
 To run all tests, run the following command:
