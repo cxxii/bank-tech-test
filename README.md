@@ -34,7 +34,7 @@ To install Auto-GPT, follow these steps:
 
 2. Open Python interactive shell
 
-    ```
+    ```bash
     python3
     ```
 
@@ -68,11 +68,10 @@ pytest bank_tech_tests.py
 ```
 
 To view the coverage report, run the following command:
+
 ```bash
-
-
-```
-Give an example
+coverage run bank_tech_tests.py 
+coverage report bank_tech_tests.py
 ```
 
 ## Version
