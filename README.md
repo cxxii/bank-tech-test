@@ -53,9 +53,9 @@ To install the bank tech test, follow these steps:
 5. Call the methods of the Bank instance as needed
 
     ```python
-    >>> bank.deposit(330, "12/10/22")
-    >>> bank.deposit(421, "13/11/22")
-    >>> bank.withdraw(112, "14/12/22")
+    >>> bank.deposit(22425.27, "31/10/20")
+    >>> bank.deposit(365, "21/11/20")
+    >>> bank.withdraw(3389.55, "24/12/22")
     >>> bank.statement()
     ```
 
