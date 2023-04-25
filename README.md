@@ -25,7 +25,7 @@ To install the bank tech test, follow these steps:
 3. Navigate to the directory where the repository was downloaded
 
     ```bash
-    cd back-tech-test
+    cd bank-tech-test
     ```
 
 ## Usage
