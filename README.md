@@ -78,7 +78,7 @@ coverage report bank_tech_tests.py
 
 ## Version
 
-v1.0.0
+v1.0.1
 
 ## Authors
 
