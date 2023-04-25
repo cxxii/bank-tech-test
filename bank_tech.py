@@ -4,7 +4,7 @@ class Bank:
         self.date = []
         self.amount = []
 
-    def deposit(self, amount, date):
+    def deposit(self, amount: float, date: str) -> None:
         """
         Deposits given amount into bank
 
@@ -26,7 +26,7 @@ class Bank:
             case n if n < 0:
                 raise Exception("CAN NOT DEPOSIT NEGATIVE MONEY")
 
-        if len(self.balance) > 0:
+        if self.balance:
             self.balance.append(self.balance[-1] + amount)
         else:
             self.balance.append(amount)
@@ -35,7 +35,7 @@ class Bank:
         self.date.append(date)
         self.amount.append(amount)
 
-    def withdraw(self, amount, date):
+    def withdraw(self, amount: float, date: str) -> None:
         """
         Function withdraws given amount of money from the bank account.
 
@@ -71,7 +71,7 @@ class Bank:
         else:
             self.balance.append(float(amount))
 
-    def statement(self):
+    def statement(self) -> str:
         """
         Prints the account statement in a formatted table
 
@@ -99,11 +99,11 @@ class Bank:
             reversed(self.date), reversed(self.amount), reversed(self.balance)
         ):
             if amount > 0:
-                credit = "{:.2f}".format(amount).rjust(13)
+                credit = "{:,.2f}".format(amount).rjust(13)
                 debit = " ".rjust(13)
             else:
                 credit = " ".rjust(13)
-                debit = "{:.2f}".format(abs(amount)).rjust(13)
+                debit = "{:,.2f}".format(abs(amount)).rjust(13)
 
             print(
                 "||",
@@ -113,10 +113,19 @@ class Bank:
                 "||",
                 debit,
                 "||",
-                "{:.2f}".format(balance).rjust(13),
+                "{:,.2f}".format(balance).rjust(13),
                 "||",
             )
 
         print(horizontal_line)
 
         return ""
+
+
+bank = Bank()
+
+bank.deposit(2000.32, "10/12/13")
+bank.deposit(200.11, "10/12/13")
+bank.deposit(200.84, "10/12/13")
+bank.withdraw(324.23, "10/12/13")
+bank.statement()
